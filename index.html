@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function selecta(elem) {
+        //document.getElementById('proba2').innerHTML = elem.id;
+          if(elem.checked) {
+            document.getElementById('proba1').style.display = "block";
+          }
+          else {
+              document.getElementById('proba1').style.display = "none";
+          }
+      }
+    </script>
+
+    <form method="post" action="">
+      <input type="checkbox" id="mindSemmi" onclick="kapcsol()"><label for="mindSemmi" id="lab">Mindent</label><br><br>
+      <input type="checkbox" id="aaa" name="Brumika" onchange="selecta(this)">a <br>
+      <input type="checkbox" id="bbb" name="Tappancs" onchange="selecta(this)">b <br>
+      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
+      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
+
+      <input type="button" value="OK" name="B1" onclick="jelol(this.form)">
+    </form>
+    <div id="proba1" style="display: none">
+        Tappancs
+    </div>
+    <div id="proba2" style="display:block">
+    </div>
+  </body>
+</html>
