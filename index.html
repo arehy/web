@@ -4,37 +4,64 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body onload="document.getElementById('proba').innerHTML = document.forms[0].elements[1]['id']">
     <script type="text/javascript">
       function selecta(elem) {
-        //document.getElementById('proba2').innerHTML = elem.id;
-          if(elem.checked) {
-            document.getElementById('proba1').style.display = "block";
+
+
+
+        //document.getElementById('proba').innerHTML = elem;
+        //document.getElementById('proba').innerHTML = elem.elements.length;
+
+        document.getElementById('proba').innerHTML = '';
+
+
+
+
+        n = 1;
+          for (i = 1; i < elem.elements.length; i++) {
+            if (elem.elements[i].checked){
+              //document.getElementById('proba').innerHTML += elem.elements[i].type;
+              document.getElementById('proba').innerHTML += n + '. ' + elem.elements[i]['id'] + '<br>';
+              n++;
+            }
           }
-          else {
-              document.getElementById('proba1').style.display = "none";
+
+      }
+      function kapcsol(elem, merre) {
+        // tomb= new Array();
+        // tomb[0] = 'aaaa';
+        // tomb[1] = 'bbbb';
+        // document.getElementById('proba').innerHTML += tomb[0] + '<br>';
+        // document.getElementById('proba').innerHTML += tomb[1] + '<br>';
+
+        for(i=0;i<elem.elements.length;i++) {
+          if (elem.elements[i].type=="checkbox"){
+            elem.elements[i].checked=merre // Ha ki nem kell, akkor merre helyett true
           }
+        }
+        selecta(elem);
+
       }
     </script>
 
-    <form method="post" action="">
-      <input type="checkbox" id="mindSemmi" onclick="kapcsol()"><label for="mindSemmi" id="lab">Mindent</label><br><br>
-      <input type="checkbox" id="aaa" name="Brumika" onchange="selecta(this)">a <br>
-      <input type="checkbox" id="bbb" name="Tappancs" onchange="selecta(this)">b <br>
-      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
-      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
-      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
-      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
-      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this)">c <br>
-      hfjdshjhdsf
-
-
-      <input type="button" value="OK" name="B1" onclick="jelol(this.form)">
+    <form id="aaaaa" onload="loadImage()" method="post" action="">
+      <input type="checkbox" id="mindSemmi" onchange="kapcsol(this.form, this.checked)"><label for="mindSemmi" id="lab">Mindent</label><br><br>
+      <input type="checkbox" id="aaa" name="brumika" onchange="selecta(this.form)" checked>a <br>
+      <input type="checkbox" id="bbb" name="tappancs" onchange="selecta(this.form)">b <br>
+      <input type="checkbox" id="ccc" name="fidoka" onchange="selecta(this.form)">c <br>
+      <input type="checkbox" id="eee" name="Fido" onchange="selecta(this.form)">proba <br>
+      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this.form)">c <br>
+      <input type="checkbox" id="ggg" name="Fido" onchange="selecta(this.form)">c <br>
+      <input type="checkbox" id="aaa" name="brumika" onchange="selecta(this.form)">a <br>
+      <input type="checkbox" id="bbb" name="tappancs" onchange="selecta(this.form)">b <br>
+      <input type="checkbox" id="ccc" name="fidoka" onchange="selecta(this.form)">c <br>
+      <input type="checkbox" id="eee" name="Fido" onchange="selecta(this.form)">proba <br>
+      <input type="checkbox" id="fff" name="Fido" onchange="selecta(this.form)">c <br>
+      <input type="checkbox" id="ggg" name="Fido" onchange="selecta(this.form)">c <br>
     </form>
-    <div id="proba1" style="display: none">
-        Tappancs
-    </div>
-    <div id="proba2" style="display:block">
+
+    <div id="proba">
     </div>
   </body>
 </html>
