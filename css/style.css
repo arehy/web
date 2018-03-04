@@ -1,12 +1,18 @@
+:root {
+  --bg-size: 20px 20px;
+  --checkbox-width: 25px;
+  --checkbox-height: 30px;
+}
 body {
   background-image: url("../images/header.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: contain;
 }
 td {
-    height: 20px;
+    /* height: 20px; */
     vertical-align: middle;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: 0 0 0 0px;
 }
 input[type=checkbox] {
@@ -16,19 +22,19 @@ display:none;
 input[type=checkbox] + label.checkbox {
 background: url('../images/32px-Locked_waypoint_(map_icon).png') no-repeat;
 background-position: center center;
-background-size: 20px 20px;
-width: 30px;
-height: 30px;
-display:inline-block;
+background-size: var(--bg-size);
+width: var(--checkbox-width);
+height: var(--checkbox-height);
+display: block;
 padding: 0 0 0 0px;
 }
 input[type=checkbox]:checked + label.checkbox {
 background: url('../images/32px-Waypoint_(map_icon).png') no-repeat;
 /* background-attachment: fixed; */
 background-position: center center;
-background-size: 20px 20px;
-width: 30px;
-height: 30px;
-display:inline-block;
+background-size: var(--bg-size);
+width: var(--checkbox-width);
+height: var(--checkbox-height);
+display: block;
 padding: 0 0 0 0px;
 }

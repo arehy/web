@@ -6,29 +6,54 @@
     <link href="css\style.css" rel="stylesheet">
     <script src="js\function.js"></script>
   </head>
-  <body onload="resultWrite(); checkAll()">
+  <body onload="tombTest(); resultWrite(); checkAll()">
     <form>
+    <div id="checkboxContent"></div>
+    </form>
+    <!-- <form>
       <table>
         <tr>
           <td>
-            <input type="checkbox" id="selectAll" onchange="checkAll()" checked><label class="checkbox" for="selectAll"></label>
+            <input type="checkbox" id="selectAll" onchange="checkAll()" checked>
+            <label class="checkbox" for="selectAll"></label>
           </td>
           <td>
             <label class="text" for="selectAll">Mindent</label>
           </td>
         </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
         <tr>
-          <td>Jill</td>
-          <td>Smith</td>
+          <td>
+            <input type="checkbox" id="BGMAAAA" name="[&BGMAAAA=]" onchange="tombTest()">
+            <label class="checkbox" for="BGMAAAA"></label>
+          </td>
+          <td>
+            <label class="text" for="BGMAAAA">Gallowfields</label>
+          </td>
         </tr>
         <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
+          <td>
+            <input type="checkbox" id="BAYAAAA" name="[&BAYAAAA=]" onchange="resultWrite()">
+            <label class="checkbox" for="BAYAAAA"></label>
+          </td>
+          <td>
+            <label class="text" for="BAYAAAA">Halacon</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="BBIAAAA" name="[&BBIAAAA=]" onchange="resultWrite()">
+            <label class="checkbox" for="BBIAAAA"></label>
+          </td>
+          <td>
+            <label class="text" for="BBIAAAA">Cereboth</label>
+          </td>
         </tr>
       </table>
-      <input type="checkbox" id="BGMAAAA" name="[&BGMAAAA=]" onchange="resultWrite()"><label class="checkbox" for="BGMAAAA"></label><label class="text" for="BGMAAAA">Gallowfields</label><br>
-      <input type="checkbox" id="BAYAAAA" name="[&BAYAAAA=]" onchange="resultWrite()"><label class="checkbox" for="BAYAAAA"></label><label class="text" for="BAYAAAA">Halacon</label><br>
-      <input type="checkbox" id="BBIAAAA" name="[&BBIAAAA=]" onchange="resultWrite()"><label class="checkbox" for="BBIAAAA"></label><label class="text" for="BBIAAAA">Cereboth</label><br>
+      <input type="button" name="" value="" onclick="tombTest()">
       <input type="checkbox" id="BKsAAAA" name="[&BKsAAAA=]" onchange="resultWrite()"><label class="checkbox" for="BKsAAAA"></label><label class="text" for="BKsAAAA">Demetra</label><br>
       <input type="checkbox" id="BJMBAAA" name="[&BJMBAAA=]" onchange="resultWrite()"><label class="checkbox" for="BJMBAAA"></label><label class="text" for="BJMBAAA">Icegate</label><br>
       <input type="checkbox" id="BOQAAAA" name="[&BOQAAAA=]" onchange="resultWrite()"><label class="checkbox" for="BOQAAAA"></label><label class="text" for="BOQAAAA">Provern Shore</label><br>
@@ -39,7 +64,7 @@
       <input type="checkbox" id="BF4BAAA" name="[&BF4BAAA=]" onchange="resultWrite()"><label class="checkbox" for="BF4BAAA"></label><label class="text" for="BF4BAAA">Oldgate</label><br>
       <input type="checkbox" id="BEsBAAA" name="[&BEsBAAA=]" onchange="resultWrite()"><label class="checkbox" for="BEsBAAA"></label><label class="text" for="BEsBAAA">Helliot</label>
       <br>
-    </form>
+    </form> -->
 
     <div id="resultContent">
     </div>
