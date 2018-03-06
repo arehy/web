@@ -30,5 +30,16 @@
     </div>
     <div id="resultContent">&nbsp
     </div>
+
+    <form>
+    <input type="text" id="copy-text5" onclick="selectionCopy()">
+    <input type="checkbox" id="copy-text6">
+    <input type="checkbox" id="copy-text7">
+    </form>
+    <div id="resultContent">
+
+    </div>
+    <textarea style="visibility: hidden;" id="copy-text2">tappancs
+    </textarea>
   </body>
 </html>

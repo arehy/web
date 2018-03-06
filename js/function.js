@@ -1,3 +1,12 @@
+function selectionCopy() {
+
+		document.getElementById("copy-text2").style.visibility = "visible";
+    document.getElementById("copy-text2").select();
+    document.execCommand('copy');
+    document.getElementById("copy-text2").style.visibility = "hidden";
+    alert('This is a test...');
+
+}
 function resultWrite() {
   document.getElementById('resultContent').innerHTML = '';
   var elem = document.forms[0];
@@ -14,7 +23,8 @@ function checkAll() {
     document.getElementById('lab').innerHTML = 'Semmit';
   }
   else{
-    document.getElementById('resultContent').innerHTML = '<p>Nincs kiválasztva semmi</p>';
+    //aaaaaa = '<p>Nincs kiválasztva semmi</p>';
+    //document.getElementById('resultContent').innerHTML = '<p>Nincs kiválasztva semmi</p>';
     document.getElementById('lab').innerHTML = 'Mindet';
   }
 
