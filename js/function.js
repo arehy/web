@@ -1,10 +1,18 @@
+function selectionCopy() {
+
+	document.getElementById("resultContent").style.visibility = "visible";
+	document.getElementById("resultContent").select();
+	document.execCommand('copy');
+	document.getElementById("resultContent").style.visibility = "hidden";
+
+}
 function resultWrite() {
   document.getElementById('resultContent').innerHTML = '';
   var elem = document.forms[0];
   var n = 1;
     for (i = 1; i < elem.elements.length; i++) {
       if (elem.elements[i].checked){
-        document.getElementById('resultContent').innerHTML += '<p>' + n + '. ' + elem.elements[i]['name'] + '</p>';
+        document.getElementById('resultContent').innerHTML += n + '.' + elem.elements[i]['name'] + ' ';
         n++;
       }
     }
@@ -14,7 +22,8 @@ function checkAll() {
     document.getElementById('lab').innerHTML = 'Semmit';
   }
   else{
-    document.getElementById('resultContent').innerHTML = '<p>Nincs kiválasztva semmi</p>';
+    //aaaaaa = '<p>Nincs kiválasztva semmi</p>';
+    //document.getElementById('resultContent').innerHTML = '<p>Nincs kiválasztva semmi</p>';
     document.getElementById('lab').innerHTML = 'Mindet';
   }
 

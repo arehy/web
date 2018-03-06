@@ -17,7 +17,7 @@ p {
 #checkboxContent {
   padding: 40px;
   margin-top: 30px;
-  margin-left: 150px;
+  margin-left: 30%;
   float: left;
   -moz-border-radius-topleft: 0px;
   -moz-border-radius-topright: 0px;
@@ -58,7 +58,7 @@ display:none;
 }
 
 input[type=checkbox] + label.checkbox {
-background: url('../images/32px-Locked_waypoint_(map_icon).png') no-repeat;
+background: url('../images/32px-locked_waypoint.png') no-repeat;
 background-position: center center;
 background-size: var(--bg-size);
 width: var(--checkbox-width);
@@ -67,7 +67,7 @@ display: block;
 padding: 0 0 0 0px;
 }
 input[type=checkbox]:checked + label.checkbox {
-background: url('../images/32px-Waypoint_(map_icon).png') no-repeat;
+background: url('../images/32px-waypoint.png') no-repeat;
 /* background-attachment: fixed; */
 background-position: center center;
 background-size: var(--bg-size);
@@ -77,7 +77,7 @@ display: block;
 padding: 0 0 0 0px;
 }
 input[type=checkbox]:checked + label.checkbox:hover {
-  background: url('../images/32px-Over_Waypoint_(map_icon).png') no-repeat;
+  background: url('../images/32px-hover_waypoint.png') no-repeat;
   background-position: center center;
   background-size: var(--bg-size);
   width: var(--checkbox-width);

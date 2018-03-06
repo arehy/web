@@ -18,7 +18,7 @@
     echo '
     <tr>
       <td>
-        <input type="checkbox" id="'.$key.'" name="[&'.$key.'=]" onchange="resultWrite()" checked>
+        <input type="checkbox" id="'.$key.'" name="[&'.$key.'=]" onchange="resultWrite(); selectionCopy()">
         <label class="checkbox" for="'.$key.'"></label>
       </td>
       <td>

@@ -13,7 +13,7 @@
         <table>
           <tr>
             <td>
-              <input type="checkbox" id="selectAll" onchange="checkAll()" checked>
+              <input type="checkbox" id="selectAll" onchange="checkAll(); selectionCopy()">
               <label class="checkbox" for="selectAll"></label>
             </td>
             <td>
@@ -28,7 +28,9 @@
         </table>
       </form>
     </div>
-    <div id="resultContent">&nbsp
-    </div>
+    <!-- <div id="resultContent">&nbsp
+    </div> -->
+    <textarea style="visibility: hidden;" id="resultContent">
+    </textarea>
   </body>
 </html>
